@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+// Libs to use gradients
 import 'package:gradient_borders/gradient_borders.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -12,9 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Disable device status bar
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
 
     return MaterialApp(
+      // Remove "debug" banner
       debugShowCheckedModeBanner: false,
       title: 'Gradient example',
       theme: ThemeData(),
@@ -28,11 +31,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Gradient to apply in the border and text
     const List<Color> gradientColors = [Color(0xFFFDEF80), Color(0xFF7CEF94)];
 
     return Container(
       decoration: BoxDecoration(
         color: Colors.black,
+        // Apply gradient border
         border: const GradientBoxBorder(
           gradient: LinearGradient(
             colors: gradientColors,
@@ -49,6 +54,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Apply gradient text
             GradientText(
               'Eat\nSleep\nCode\nRepeat',
               style: const TextStyle(
