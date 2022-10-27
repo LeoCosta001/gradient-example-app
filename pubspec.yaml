@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  gradient_borders: ^0.2.0
+  simple_gradient_text: ^1.2.4
   flutter_test:
     sdk: flutter
 
